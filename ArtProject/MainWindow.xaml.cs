@@ -43,11 +43,15 @@ namespace ArtProject
 
             if (cbElement.Text == "Соединительная линия")
             {
-                var newLine = new SolidLine();
-                var beginIndex = (int)_paintField.RectangleClick(position);
-                _paintField.CreateNewLine(newLine, beginIndex);
-                _makeLine.IsActive = true;
-                _makeLine.ItemIndex = _paintField.Lines.Count() - 1;
+                if (_paintField.RectangleClick(position) != null)
+                {
+                    var newLine = new SolidLine();
+                    var beginIndex = (int) _paintField.RectangleClick(position);
+                    _paintField.CreateNewLine(newLine, beginIndex);
+                    _makeLine.IsActive = true;
+                    _makeLine.ItemIndex = _paintField.Lines.Count() - 1;
+                }
+
             }
             else
             {
