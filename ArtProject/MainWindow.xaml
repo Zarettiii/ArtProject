@@ -1,0 +1,13 @@
+﻿<Window x:Class="ArtProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArtProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="390" Width="718">
+    <Grid>
+        <Canvas x:Name="cnvPaintPanel" HorizontalAlignment="Left" Height="339" Margin="208,10,0,0" VerticalAlignment="Top" Width="492" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" MouseMove="cnvPaintPanel_MouseMove" MouseDown="cnvPaintPanel_MouseDown" MouseUp="cnvPaintPanel_MouseUp"/>
+        <ComboBox x:Name="cbElement" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="193" SelectedIndex="0"/>
+    </Grid>
+</Window>
